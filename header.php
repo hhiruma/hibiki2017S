@@ -7,6 +7,7 @@
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 		<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css">
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/css/external_resources/flexslider/flexslider.css" type="text/css">
 		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
 		<script src='<?php echo get_template_directory_uri();?>/js/external_resources/vue.js'></script>

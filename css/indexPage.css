@@ -1,0 +1,112 @@
+#indexContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#initLogoContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+
+    display: flex;
+    align-items: center;
+}
+#initLogoContainer img {
+    width: 100%;
+}
+
+#indexBgContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* #indexBgContainer>div{ */
+#indexRow1{
+    height: 66%;
+    background-clip: white;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#indexRow2{
+    display: flex;
+    height: 33%;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+}
+
+#indexBgContainer>div>div{
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: cover;
+
+    border: 5px solid black;
+    box-sizing: border-box;
+}
+
+#indexBg{ flex-grow: 1; display: flex; align-items: flex-end; }
+
+#nameLogo {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    width: 70%;
+}
+
+#tomoeLogo {
+    width: 50%;
+    opacity: 0.5;
+}
+
+/* --------------------------- */
+
+#mainMenu{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.mainMenuEl:last-child{
+    margin-bottom: 100px;
+}
+
+.mainMenuEl {
+    position: relative;
+    font-weight: bold;
+    height: 2em;
+    font-size: 2em;
+    margin: 10px 0;
+    padding: 0 0 0 10px;
+    border: 3px solid rgb(117, 117, 117);
+    box-sizing: border-box;
+    border-radius: 3px;
+
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(243,243,243,1) 50%, rgba(237,237,237,1) 51%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.mainMenuEl a{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

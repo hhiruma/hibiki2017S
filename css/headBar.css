@@ -1,0 +1,53 @@
+#menuButton{
+    position: absolute;
+    right: 5%;
+    top: 2%;
+    font-size: 6em;
+    z-index: 1000;
+}
+
+#headBarMenu{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    /* background-color: transparent; */
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    z-index: 900;
+}
+
+.headBarMenuEl:last-child{
+    margin-bottom: 100px;
+}
+
+.headBarMenuEl {
+    position: relative;
+    font-weight: bold;
+    height: 2em;
+    font-size: 2em;
+    margin: 10px 0;
+    padding: 0 0 0 10px;
+    border: 3px solid rgb(117, 117, 117);
+    box-sizing: border-box;
+    border-radius: 3px;
+
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(243,243,243,1) 50%, rgba(237,237,237,1) 51%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.headBarMenuEl a{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

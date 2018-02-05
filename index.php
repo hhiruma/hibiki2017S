@@ -3,7 +3,7 @@
 <main class="site-main" role="main">
 	<div id="indexContainer">
 		<div id="initLogoContainer">
-			<img src="<?php echo get_template_directory_uri();?>/images/general/logo.jpg">
+			<img src="<?php echo get_template_directory_uri();?>/images/general/logo.png">
 		</div>
 		<div id="indexBgContainer">
 			<div id="indexRow1">

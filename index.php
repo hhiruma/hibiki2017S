@@ -6,7 +6,10 @@
 				<?php get_template_part('pages/top'); ?>
 			</section>
 			<section>
-				<?php get_template_part('pages/main');?>
+				<?php get_template_part('pages/aboutUs');?>
+			</section>
+			<section>
+				<?php get_template_part('pages/stages');?>
 			</section>
 		</div>
 </main>

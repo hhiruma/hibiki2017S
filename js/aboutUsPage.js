@@ -39,6 +39,7 @@ $('#aboutUsImg.flexslider').flexslider({
     directionNav: false,
     animationSpeed: 500,
     before: function(slider){
+        $('#aboutUsDesc .flexslider').flexslider(slider.animatingTo);
         $('#aboutUsDesc .flexslider .flex-direction-nav').hide();
     },
     after: function(slider){

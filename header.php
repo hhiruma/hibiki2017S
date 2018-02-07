@@ -15,6 +15,7 @@
 		<script src='<?php echo get_template_directory_uri();?>/js/external_resources/jquery.flexslider.js'></script>
 		<script src='<?php echo get_template_directory_uri();?>/js/external_resources/jquery.onepage-scroll.js'></script>
 		<script src="<?php echo get_template_directory_uri();?>/js/external_resources/jquery.bgswitcher.js"></script>
+		<script src="<?php echo get_template_directory_uri();?>/js/external_resources/anime.min.js"></script>
 
 		<?php wp_head(); ?>
 	</head>

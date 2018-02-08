@@ -21,14 +21,33 @@ h1 {
     height: 40%;
     top: 0;
     left: 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+}
 
-    border: 1px solid red;
+#stagesVideo ul {
+    background: transparent;
+    height: 100%;
+}
+
+#stagesVideo li {
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    margin: 0;
 }
 
 #stagesVideo iframe{
     width: 85%;
     height: 70%;
     margin: 20% 7.5% 5% 7.5%;
+}
+
+#stagesVideo .twitterWidget {
+    position: absolute;
+    width: 50%;
+    height: 60%;
 }
 
 #stagesSelector {
@@ -40,8 +59,7 @@ h1 {
 
     padding: 5%;
     box-sizing: border-box;
-
-    border: 1px solid blue;
+    border: none;
 }
 
 #stagesShowTabContainer {
@@ -72,7 +90,6 @@ h1 {
     height: 90%;
     left: 25%;
 }
-
 
 #stagesShowMainContainer .flexslider {
     position: absolute;
@@ -145,10 +162,10 @@ h1 {
 
 .stagesTopBar{
     position: absolute;
-    width: 1.5em;
-    background-color: white;
+    width: 33%;
+    background-color: rgba(255, 255, 255, 0.5);
     height: 1.5em;
-    font-size: 2em;
+    font-size: 1.5em;
     padding: 0 0 0 30px;
 }
 
@@ -159,4 +176,24 @@ h1 {
 
 .stagePostContainer .stagePostMediaContainer{
     display: none;
+}
+
+#stagesShowMainTopBar{
+    position: relative;
+    background: transparent;
+    z-index: 100;
+}
+
+#stageVideoSlides1, #stageVideoSlides2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#stageVideoSlides1 p, #stageVideoSlides2 p {
+    text-align: center;
 }

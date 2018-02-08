@@ -10,15 +10,41 @@ Template Name: stages template
     <?php get_template_part('pages/headBar');?>
     <div id="stagesContainer">
         <h1> STAGES </h1>
-        <div id="stagesVideo">
-            <template v-for="postData in postsData" v-if="postData['title'] === selectedPostTitle">
-                <iframe
-                    width="100%"
-                    :src="'http://'+postData['content'].match(/www\.youtube\.com.*rel=0/)[0]"
-                    frameborder="0"
-                    allowfullscreen>
-                </iframe>
-            </template>
+        <div id="stagesVideo" class="flexslider">
+            <ul class="slides">
+                <li>
+                    <div id="stageVideoSlides1">
+                        <p>
+                            <i class="fab fa-youtube" style="font-size: 160px; color: red"></i>
+                            <br>
+                            舞台を選ぶとここに動画が表示されます
+                            <br>
+                            年度を選択してください
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div id="stageVideoSlides2">
+                        <p>
+                            <i class="fab fa-youtube" style="font-size: 160px; color: red;"></i>
+                            <br>
+                            舞台を選ぶとここに動画が表示されます
+                            <br>
+                            舞台を選択してください
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <template v-for="postData in postsData" v-if="postData['title'] === selectedPostTitle">
+                        <iframe
+                            width="100%"
+                            :src="'http://'+postData['content'].match(/www\.youtube\.com.*rel=0/)[0]"
+                            frameborder="0"
+                            allowfullscreen>
+                        </iframe>
+                    </template>
+                </li>
+            </ul>
         </div>
         <div id="stagesSelector">
             <div id="stagesShowTabContainer">
@@ -48,10 +74,9 @@ Template Name: stages template
                         </li>
 
                         <li id="stagesSlides2">
-                            <!-- <div class="stagesTopBar">
-                                <i class="fa fa-arrow-left" aria-hidden="true" @click="slideBackTo(0)"></i>
-                                select stage
-                            </div> -->
+                            <div class="stagesTopBar">
+                                Select Stage
+                            </div>
                             <div class="stagesThumbnailContainer">
                                 <template v-for="postData in postsData" v-if="filterPostByDate(postData)">
                                     <label for="stageSelectedButton">
@@ -73,7 +98,6 @@ Template Name: stages template
                         <li id="stagesSlides3">
                             <div id="stagesShowMainContent">
                                 <div id="stagesShowMainTopBar">
-                                    <i class="fa fa-arrow-left" aria-hidden="true" @click="slideBackTo(1)"></i>
                                     {{ selectedPostTitle }}
                                 </div>
                                 <template class="stageShowContentHtml" v-for="postData in postsData" v-if="postData['title'] === selectedPostTitle">

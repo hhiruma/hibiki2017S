@@ -1,4 +1,4 @@
-new Vue({
+const vm = new Vue({
     el: "#stagesContainer",
     data: {
         postsData: stagePosts,
@@ -31,8 +31,10 @@ new Vue({
         },
         selectYear(activeYear) {
             this.selectedYear = activeYear;
-            this.selectedPostTitle = '';
             $('#stagesShowMainContainer .flexslider').data('flexslider').flexAnimate(1);
+            setTimeout(()=>{
+                this.selectedPostTitle = '';
+            }, 500);
         },
         filterPostByDate(post) {
             return this.getActiveYear(post['date']) === this.selectedYear;
@@ -47,9 +49,12 @@ new Vue({
             $('#stagesShowMainContainer .flexslider').data('flexslider').flexAnimate(i);
             if(i === 0){
                 $('#stagesShowTabContainer input[type="radio"]').prop('checked', false);
+                this.selectedYear = 0;
             }
             if(i === 1){
-                this.selectedPostTitle = '';
+                setTimeout(()=>{
+                    this.selectedPostTitle = '';
+                }, 500);
             }
         }
     },
@@ -74,6 +79,18 @@ new Vue({
     }
 });
 
+$('#stagesVideo.flexslider').flexslider({
+    animation: 'fade',
+    slideshow: false,
+    animationLoop: false,
+    animationSpeed: 500,
+    controlNav: false,
+    directionNav: false,
+    touch: false,
+    before: function(slider){},
+    after: function(slider){}
+})
+
 // flexslider
 $('#stagesShowMainContainer .flexslider').flexslider({
     animation: 'slide',
@@ -82,8 +99,17 @@ $('#stagesShowMainContainer .flexslider').flexslider({
     animationSpeed: 500,
     controlNav: false,
     directionNav: false,
-    before: function(slider){ },
-    after: function(slider){ }
+    before: function(slider){
+        $('#stagesVideo.flexslider').flexslider(slider.animatingTo);
+    },
+    after: function(slider){
+        if(slider.currentSlide === 1 && vm.selectedYear === 0){
+            slider.flexAnimate(0);
+        }
+        if(slider.currentSlide === 2 && vm.selectedPostTitle === ""){
+            slider.flexAnimate(1);
+        }
+    }
 });
 
 $('#stagesShowMainContainer button#stageSelectedButton').click(()=>{
